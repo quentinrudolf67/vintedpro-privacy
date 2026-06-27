@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — VintedPro</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 24px; color: #18181b; line-height: 1.7; }
+    h1 { color: #7c3aed; }
+    h2 { color: #3f3f46; margin-top: 2rem; }
+    p { margin: 0.75rem 0; }
+    .badge { display: inline-block; background: #f4f4f5; border-radius: 6px; padding: 2px 10px; font-size: 0.85em; color: #52525b; }
+    footer { margin-top: 3rem; color: #a1a1aa; font-size: 0.9em; border-top: 1px solid #e4e4e7; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+
+  <h1>Politique de confidentialité</h1>
+  <p><strong>Extension :</strong> VintedPro <span class="badge">Chrome Extension</span></p>
+  <p><strong>Dernière mise à jour :</strong> juin 2026</p>
+
+  <h2>1. Résumé en deux phrases</h2>
+  <p>VintedPro ne collecte aucune donnée personnelle et n'envoie rien à aucun serveur externe (sauf si vous activez la fonctionnalité IA, qui contacte l'API Anthropic avec votre propre clé). Toutes les données restent dans votre navigateur.</p>
+
+  <h2>2. Données stockées localement</h2>
+  <p>L'extension utilise <code>chrome.storage.local</code> pour sauvegarder uniquement :</p>
+  <ul>
+    <li>Vos préférences (intervalle de bump, délai de message, etc.)</li>
+    <li>L'identifiant Vinted de votre compte (détecté automatiquement depuis la page)</li>
+    <li>La liste des acheteurs déjà contactés (pour éviter les doublons)</li>
+    <li>Les statistiques de ventes synchronisées depuis Vinted</li>
+  </ul>
+  <p>Ces données ne quittent jamais votre appareil. Elles sont supprimées si vous désinstallez l'extension.</p>
+
+  <h2>3. Données transmises à des tiers</h2>
+  <p><strong>API Vinted</strong> — L'extension effectue des requêtes vers <code>vinted.fr</code> en utilisant votre session de navigation existante. Aucun identifiant supplémentaire n'est transmis. Ces requêtes sont identiques à ce que vous feriez manuellement sur le site.</p>
+  <p><strong>API Anthropic (optionnel)</strong> — Si vous activez les réponses automatiques IA et renseignez votre clé API Anthropic, les messages reçus de vos acheteurs sont transmis à l'API d'Anthropic pour générer une réponse. Cette fonctionnalité est entièrement optionnelle et désactivée par défaut. Votre clé API est stockée localement et n'est jamais partagée.</p>
+
+  <h2>4. Données non collectées</h2>
+  <p>VintedPro ne collecte pas et ne transmet pas :</p>
+  <ul>
+    <li>Votre nom, email ou mot de passe Vinted</li>
+    <li>Votre historique de navigation</li>
+    <li>Vos informations bancaires ou de paiement</li>
+    <li>Toute donnée vers un serveur appartenant à VintedPro</li>
+  </ul>
+
+  <h2>5. Permissions Chrome utilisées</h2>
+  <ul>
+    <li><code>storage</code> — sauvegarder vos préférences localement</li>
+    <li><code>alarms</code> — planifier les bumps et vérifications automatiques</li>
+    <li><code>tabs</code> — détecter l'onglet Vinted ouvert</li>
+    <li><code>scripting</code> — exécuter les requêtes Vinted depuis l'onglet</li>
+    <li><code>notifications</code> — vous informer des actions effectuées</li>
+    <li><code>host_permissions: vinted.fr</code> — accéder à l'API Vinted</li>
+  </ul>
+
+  <h2>6. Contact</h2>
+  <p>Pour toute question : <a href="mailto:quentinrudolf67@gmail.com">quentinrudolf67@gmail.com</a></p>
+
+  <footer>
+    VintedPro est un projet indépendant, non affilié à Vinted SA.
+  </footer>
+
+</body>
+</html>
